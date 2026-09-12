@@ -44,5 +44,5 @@ export function MusicPlayer() {
     return removeInteractionListeners
   }, [])
 
-  return <audio ref={audioRef} src="/young-and-beautiful.mp3" loop autoPlay preload="auto" />
+  return <audio ref={audioRef} src="/young-and-beautiful.m4a" loop autoPlay preload="auto" />
 }
