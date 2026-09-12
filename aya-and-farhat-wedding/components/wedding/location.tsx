@@ -4,14 +4,8 @@ import { Reveal } from './reveal'
 
 export function Location({ active }: { active?: boolean }) {
   return (
-    <section className="relative flex h-full w-full items-center justify-center overflow-hidden px-4 py-6 text-center">
-      <div className="relative flex h-[calc(100svh-2rem)] w-full max-w-md flex-col items-center justify-center overflow-y-auto border border-primary/25 px-4 py-8 text-center [scrollbar-width:none] sm:px-8 [&::-webkit-scrollbar]:hidden">
-        <div
-          className="pointer-events-none absolute inset-[6px] border border-primary/15"
-          aria-hidden="true"
-        />
-
-        <Reveal active={active} delay={0} className="flex w-full flex-col items-center">
+    <section className="relative flex w-full flex-col items-center pb-12 text-center">
+      <Reveal active={active} delay={0} className="flex w-full flex-col items-center">
           <p className="font-sans text-[0.6rem] uppercase tracking-[0.4em] text-muted-foreground">
             Reception
           </p>
@@ -47,7 +41,6 @@ export function Location({ active }: { active?: boolean }) {
             <Countdown />
           </div>
         </Reveal>
-      </div>
     </section>
   )
 }
