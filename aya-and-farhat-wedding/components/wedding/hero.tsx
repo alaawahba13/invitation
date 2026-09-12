@@ -3,16 +3,8 @@ import { Reveal } from './reveal'
 
 export function Hero({ active }: { active?: boolean }) {
   return (
-    <header className="relative flex h-full w-full items-center justify-center overflow-hidden px-4 py-6">
-      {/* Outer framed card */}
-      <div className="relative flex h-[calc(100svh-2rem)] w-full max-w-md flex-col items-center justify-center overflow-y-auto border border-primary/25 px-4 text-center [scrollbar-width:none] sm:px-8 [&::-webkit-scrollbar]:hidden">
-        {/* Inner hairline frame */}
-        <div
-          className="pointer-events-none absolute inset-[6px] border border-primary/15"
-          aria-hidden="true"
-        />
-
-        {/* Monogram */}
+    <header className="relative flex w-full flex-col items-center pt-8 text-center">
+      {/* Monogram */}
         <Reveal active={active} delay={0} className="relative flex h-24 w-16 items-center justify-center">
           <div className="absolute inset-0 rounded-full border border-primary/50" />
           <div className="absolute inset-[3px] rounded-full border border-primary/50" />
@@ -79,29 +71,6 @@ export function Hero({ active }: { active?: boolean }) {
           </span>
         </Reveal>
 
-        <Reveal active={active} delay={460}>
-          <a
-            href="https://maps.app.goo.gl/NfHs64VzhmVx1nuYA?g_st=ic"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group mt-6 inline-flex items-center gap-2 font-sans text-xs uppercase tracking-[0.2em] text-primary underline-offset-4 transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
-          >
-            <MapPin className="h-3.5 w-3.5" strokeWidth={1.5} aria-hidden="true" />
-            <span className="underline decoration-primary/40 group-hover:decoration-primary">
-              Ziya Venue
-            </span>
-          </a>
-        </Reveal>
-
-        {/* Corner floral spray */}
-        <Reveal
-          active={active}
-          delay={150}
-          className="pointer-events-none absolute -bottom-3 -right-3 h-[clamp(88px,26vw,144px)] w-auto -scale-x-100"
-        >
-          <img src="/corner-spray.png" alt="" aria-hidden="true" className="h-full w-auto opacity-90" />
-        </Reveal>
-      </div>
     </header>
   )
 }
